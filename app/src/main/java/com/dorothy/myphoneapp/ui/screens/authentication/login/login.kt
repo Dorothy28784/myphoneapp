@@ -106,11 +106,17 @@ fun LoginScreen(modifier: Modifier) {
                     contentDescription = "Email"
                 )
             },
+            label = {
 
-            placeholder = {
-                Text(text = "eg.1234")
             },
-            maxLines = 1,
+
+            maxLines = 1,  shape = RoundedCornerShape(24.dp),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+            colors  = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = secondaryColor,
+                unfocusedBorderColor = primaryColor
+            ),
+
             modifier = Modifier.fillMaxWidth()
         )
         //  button
