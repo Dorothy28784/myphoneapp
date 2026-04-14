@@ -49,7 +49,7 @@ fun signupScreen(modifier: Modifier) {
 
 //        // welcome message
         Text(
-            text = "Login to get started",
+            text = "signup to get started",
             style = TextStyle(
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
@@ -101,7 +101,7 @@ fun signupScreen(modifier: Modifier) {
         OutlinedButton(
             onClick = {}
         ) {
-            Text(text = "login",
+            Text(text = "signup",
                 modifier = Modifier.padding(horizontal = 24.dp))
         }
 

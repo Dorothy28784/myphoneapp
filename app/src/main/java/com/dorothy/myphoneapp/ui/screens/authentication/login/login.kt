@@ -1,5 +1,6 @@
 package com.dorothy.myphoneapp.ui.screens.authentication.login
 
+import android.R.attr.value
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -8,11 +9,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -25,6 +29,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -34,6 +39,7 @@ import com.dorothy.myphoneapp.ui.components.LottieAnimationWidget
 import com.dorothy.myphoneapp.ui.components.`pagepadding`
 import com.dorothy.myphoneapp.ui.components.pagepadding
 import com.dorothy.myphoneapp.ui.theme.primaryColor
+import com.dorothy.myphoneapp.ui.theme.secondaryColor
 
 @Composable
 fun LoginScreen(modifier: Modifier) {
@@ -70,7 +76,8 @@ fun LoginScreen(modifier: Modifier) {
             leadingIcon = {
                 Icon(
                     imageVector = Icons.Outlined.Email,
-                    contentDescription = "Email"
+                    contentDescription = "Email",
+                    tint = primaryColor
                 )
             },
 
@@ -78,10 +85,17 @@ fun LoginScreen(modifier: Modifier) {
                 Text(text = "eg.dm@example.com")
             },
             maxLines = 1,
+            shape = RoundedCornerShape(24.dp),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+            colors  = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = secondaryColor,
+                unfocusedBorderColor = primaryColor
+            ),
             modifier = Modifier.fillMaxWidth()
+
         )
 
-
+        Spacer(modifier=Modifier.height(24.dp))
         //  password input
         OutlinedTextField(
             value = passwordInput,
