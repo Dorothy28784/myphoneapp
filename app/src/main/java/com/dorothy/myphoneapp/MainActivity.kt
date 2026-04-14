@@ -1,5 +1,6 @@
 package com.dorothy.myphoneapp
 
+import ForgotPasswordScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyPhoneAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    LoginScreen(modifier = Modifier.padding(innerPadding))
+                        ForgotPasswordScreen(modifier = Modifier.padding(innerPadding))
                 }
 
 

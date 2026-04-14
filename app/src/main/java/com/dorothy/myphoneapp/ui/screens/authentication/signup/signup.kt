@@ -1,4 +1,4 @@
-package com.dorothy.myphoneapp.ui.screens.authentication.login
+package com.dorothy.myphoneapp.ui.screens.authentication.signup
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,17 +26,15 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dorothy.myphoneapp.R
 import com.dorothy.myphoneapp.ui.components.LottieAnimationWidget
-import com.dorothy.myphoneapp.ui.components.`pagepadding`
 import com.dorothy.myphoneapp.ui.components.pagepadding
 import com.dorothy.myphoneapp.ui.theme.primaryColor
 
 @Composable
-fun LoginScreen(modifier: Modifier) {
+fun signupScreen(modifier: Modifier) {
     //     inputs
     var emailInput by remember { mutableStateOf(TextFieldValue("")) }
     var passwordInput by remember { mutableStateOf(TextFieldValue("")) }
@@ -50,15 +48,15 @@ fun LoginScreen(modifier: Modifier) {
         LottieAnimationWidget(R.raw.moon, 300.dp)
 
 //        // welcome message
-         Text(
-             text = "Login to get started",
-             style = TextStyle(
-                 fontSize = 24.sp,
-                 fontWeight = FontWeight.Bold,
-                 color = primaryColor
+        Text(
+            text = "Login to get started",
+            style = TextStyle(
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                color = primaryColor
 
-             )
-         )
+            )
+        )
 
         Spacer(modifier=Modifier.height(24.dp))
 
@@ -117,5 +115,4 @@ fun LoginScreen(modifier: Modifier) {
 
 
 }
-
 
