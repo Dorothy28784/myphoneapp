@@ -13,7 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.dorothy.myphoneapp.ui.screens.authentication.login.LoginScreen
-import com.dorothy.myphoneapp.ui.screens.authentication.signup.signupScreen
 import com.dorothy.myphoneapp.ui.theme.MyPhoneAppTheme
 
 
@@ -24,7 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyPhoneAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    LoginScreen( modifier = Modifier.padding(innerPadding))
+                        LoginScreen( modifier = Modifier.padding(innerPadding))
                 }
 
 
