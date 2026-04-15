@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyPhoneAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ForgotPasswordScreen( modifier = Modifier.padding(innerPadding))
+                    SignupScreen( modifier = Modifier.padding(innerPadding))
                 }
 
 
