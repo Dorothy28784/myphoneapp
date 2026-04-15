@@ -78,7 +78,7 @@ fun ForgotPasswordScreen(modifier: Modifier){
     ) {
 
 //        lottie animation
-        LottieAnimationWidget(R.raw.moon, 300.dp)
+        LottieAnimationWidget(R.raw.sales, 300.dp)
         Spacer(modifier= Modifier.height(36.dp))
 // page title
         Text(text=" Forgot Password ?",
