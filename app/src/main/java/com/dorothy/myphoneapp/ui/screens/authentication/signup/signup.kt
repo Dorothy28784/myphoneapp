@@ -1,6 +1,5 @@
-package com.dorothy.myphoneapp.ui.screens.authentication.login
+package com.dorothy.myphoneapp.ui.screens.authentication.signup
 
-import android.R.attr.value
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -34,18 +33,16 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dorothy.myphoneapp.R
 import com.dorothy.myphoneapp.ui.components.LottieAnimationWidget
 import com.dorothy.myphoneapp.ui.components.pagepadding
-import com.dorothy.myphoneapp.ui.components.pagepadding
 import com.dorothy.myphoneapp.ui.theme.primaryColor
 import com.dorothy.myphoneapp.ui.theme.secondaryColor
 
 @Composable
-fun LoginScreen(modifier: Modifier) {
+fun SignupScreen(modifier: Modifier) {
     //     inputs
     var emailInput by remember { mutableStateOf(TextFieldValue("")) }
     var passwordInput by remember { mutableStateOf(TextFieldValue("")) }
@@ -60,11 +57,11 @@ fun LoginScreen(modifier: Modifier) {
 
     ) {
         //   lottie animation
-        LottieAnimationWidget(R.raw.moon, 300.dp)
+        LottieAnimationWidget(R.raw.person, 300.dp)
 
 //        // welcome message
         Text(
-            text = "Login to get started",
+            text = "Signup to get started",
             style = TextStyle(
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
@@ -103,9 +100,6 @@ fun LoginScreen(modifier: Modifier) {
         )
 
         Spacer(modifier = Modifier.height(24.dp))
-
-
-
 
 
         //        password input
@@ -157,20 +151,24 @@ fun LoginScreen(modifier: Modifier) {
         )
 
         Spacer(modifier = Modifier.height(24.dp))
+
         //        button
         OutlinedButton(
             onClick = {}
         ) {
             Text(
-                text = "login",
+                text = "signup",
                 modifier = Modifier.padding(horizontal = 24.dp)
             )
         }
-
-//             row
-        Row() {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
             Text(text = "Forgot Password")
             Text(text = "No account?")
         }
     }
+
 }
+
