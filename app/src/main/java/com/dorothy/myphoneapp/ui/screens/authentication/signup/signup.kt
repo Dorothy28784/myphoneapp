@@ -1,5 +1,6 @@
 package com.dorothy.myphoneapp.ui.screens.authentication.signup
 
+import android.graphics.drawable.Icon
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,8 +11,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedButton
@@ -79,7 +78,7 @@ fun SignupScreen(modifier: Modifier) {
             onValueChange = { emailInput = it },
             leadingIcon = {
                 Icon(
-                    imageVector = Icons.Outlined.Email,
+                    imageVector = ImageVector.vectorResource(R.drawable.outline_password_24),
                     contentDescription = "Email",
                     tint = primaryColor
                 )

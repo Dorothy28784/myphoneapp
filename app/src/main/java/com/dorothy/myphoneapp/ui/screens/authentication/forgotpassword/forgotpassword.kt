@@ -1,5 +1,6 @@
-import android.R.attr.value
-import androidx.compose.foundation.content.MediaType.Companion.Text
+package com.dorothy.myphoneapp.ui.screens.authentication.forgotpassword
+
+import android.graphics.drawable.Icon
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,8 +12,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Email
+
+
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedButton
@@ -28,12 +29,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.PointerIcon.Companion.Text
-import androidx.compose.ui.semantics.SemanticsProperties.Text
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.vectorResource
+
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.input.KeyboardType.Companion.Text
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -48,8 +49,6 @@ import com.dorothy.myphoneapp.ui.components.LottieAnimationWidget
 import com.dorothy.myphoneapp.ui.components.pagepadding
 import com.dorothy.myphoneapp.ui.theme.primaryColor
 import com.dorothy.myphoneapp.ui.theme.secondaryColor
-import java.nio.file.Files.size
-
 
 
 /*
@@ -97,7 +96,7 @@ fun ForgotPasswordScreen(modifier: Modifier){
             label = { Text(text = "Email Address") } ,
             leadingIcon = {
                 Icon(
-                    imageVector = Icons.Filled.Email,
+                    imageVector = ImageVector.vectorResource(R.drawable.outline_password_24),
                     contentDescription= "Email Input",
                     tint = primaryColor
                 )

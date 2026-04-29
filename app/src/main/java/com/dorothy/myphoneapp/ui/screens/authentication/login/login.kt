@@ -1,6 +1,5 @@
 package com.dorothy.myphoneapp.ui.screens.authentication.login
 
-import android.R.attr.value
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,8 +10,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedButton
@@ -34,18 +31,17 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.dorothy.myphoneapp.R
 import com.dorothy.myphoneapp.ui.components.LottieAnimationWidget
-import com.dorothy.myphoneapp.ui.components.pagepadding
 import com.dorothy.myphoneapp.ui.components.pagepadding
 import com.dorothy.myphoneapp.ui.theme.primaryColor
 import com.dorothy.myphoneapp.ui.theme.secondaryColor
 
 @Composable
-fun LoginScreen(modifier: Modifier) {
+fun LoginScreen(navController: NavHostController, modifier: Modifier) {
     //     inputs
     var emailInput by remember { mutableStateOf(TextFieldValue("")) }
     var passwordInput by remember { mutableStateOf(TextFieldValue("")) }
@@ -82,7 +78,7 @@ fun LoginScreen(modifier: Modifier) {
             onValueChange = { emailInput = it },
             leadingIcon = {
                 Icon(
-                    imageVector = Icons.Outlined.Email,
+                    imageVector =  ImageVector.vectorResource(R.drawable.outline_password_24),
                     contentDescription = "Email",
                     tint = primaryColor
                 )
